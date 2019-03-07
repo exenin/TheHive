@@ -2,8 +2,8 @@ docker run \
   --name elasticsearch \
   --hostname elasticsearch \
   --rm \
-  --publish 127.0.0.1:9200:9200 \
-	--publish 127.0.0.1:9300:9300 \
+  --publish 127.0.0.1:9201:9200 \
+	--publish 127.0.0.1:9301:9300 \
   --volume /var/lib/elasticsearch:usr/share/elasticsearch/data \
 	-e "http.host=0.0.0.0" \
 	-e "transport.host=0.0.0.0" \

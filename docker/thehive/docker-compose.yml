@@ -21,6 +21,8 @@ services:
       - elasticsearch
     ports:
       - "0.0.0.0:9001:9001"
+    volumes:
+      - ${PWD}/application.conf:/etc/thehive/application.conf
   thehive:
     image: thehiveproject/thehive:latest
     depends_on:
@@ -28,3 +30,5 @@ services:
       - cortex
     ports:
       - "0.0.0.0:9000:9000"
+    volumes:
+      - ${PWD}/application.conf:/etc/thehive/application.conf
